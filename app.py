@@ -151,6 +151,6 @@ if st.button("🔄 Reset Permainan"):
 st.markdown("""
 <br><br>
 <div style='text-align:center; opacity:0.5; font-size:14px;'>
-    © 2025 - Dibuat dengan ❤️ oleh FUZZY BAYESSS
+    © 2025 - FUZZY BAYESSS
 </div>
 """, unsafe_allow_html=True)
