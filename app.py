@@ -32,7 +32,7 @@ if "data" not in st.session_state:
     st.session_state.data = pd.DataFrame(columns=["Ronde"] + players)
     st.session_state.ronde = 1
 
-# Jika nama pemain berubah → update kolom
+# Jika nama pemain berubah → reset kolom
 if list(st.session_state.data.columns[1:]) != players:
     st.session_state.data = pd.DataFrame(columns=["Ronde"] + players)
     st.session_state.ronde = 1
@@ -87,6 +87,15 @@ if not st.session_state.data.empty:
     st.subheader("🏆 Peringkat Pemain")
     st.table(hasil)
 
+    # ===============================
+    # NOTIF UNTUK PEMAIN TERENDAH
+    # ===============================
+    pemain_terendah = hasil.iloc[-1]["Pemain"]
+    nilai_terendah = hasil.iloc[-1]["Total Skor"]
+
+    st.error(f"😆 Pemain dengan skor terendah adalah **{pemain_terendah}** dengan total skor **{nilai_terendah}**")
+    st.warning("🤣 hahaha ngujut")
+
 # ===============================
 # RESET
 # ===============================
@@ -94,3 +103,13 @@ if st.button("🔄 Reset Permainan"):
     st.session_state.data = pd.DataFrame(columns=["Ronde"] + players)
     st.session_state.ronde = 1
     st.warning("Permainan direset!")
+
+# ===============================
+# WATERMARK
+# ===============================
+st.markdown("""
+<br><br><br>
+<div style='text-align:center; opacity:0.5; font-size:14px;'>
+    © 2025 - Dibuat  oleh FUZZY BAYES 
+</div>
+""", unsafe_allow_html=True)
