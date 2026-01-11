@@ -37,13 +37,13 @@ if not st.session_state.nama_fixed:
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        p1 = st.text_input("Pemain 1", "Andi")
+        p1 = st.text_input("Pemain 1", "tomi")
     with col2:
-        p2 = st.text_input("Pemain 2", "Budi")
+        p2 = st.text_input("Pemain 2", "erwin")
     with col3:
-        p3 = st.text_input("Pemain 3", "Citra")
+        p3 = st.text_input("Pemain 3", "fajar")
     with col4:
-        p4 = st.text_input("Pemain 4", "Deni")
+        p4 = st.text_input("Pemain 4", "ega")
 
     # Simpan nama ke session_state
     if st.button("🔒 Simpan Nama Pemain"):
