@@ -7,7 +7,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🎴 Perhitungan Permainan Kartu (4 Pemain)")
+st.title("🎴 Perhitungan Permainan Kartu")
 
 # =====================================
 # LOAD CSV JIKA ADA (AGAR DATA TIDAK HILANG)
